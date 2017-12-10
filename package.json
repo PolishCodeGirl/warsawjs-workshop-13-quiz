@@ -2,7 +2,7 @@
   "name": "warsawjs-workshop-13-quiz",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Marzena Malachowska <marzena.malachowska@kreditech.com>",
+  "author": "Marzena Malachowska <malachowska.marzena@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
