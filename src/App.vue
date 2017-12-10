@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/milionerzyLogo.jpeg">
-    <about-us/>
+    <!-- <about-us/> -->
     <router-view/>
   </div>
 </template>

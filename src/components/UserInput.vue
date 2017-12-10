@@ -1,8 +1,8 @@
 <template>
   <div>
-    <input type="text" v-bind:placeholder="placeholder" v-model="user"/>
-    <p>Player: {{ user }}</p>
-    <button v-on:click="hello">START</button>
+    <input type="text" v-bind:placeholder="placeholder" v-model="userName"/>
+    <p>Player: {{ userName }}</p>
+    <button v-on:click="launch" type="submit">{{ newmessage }}</button>
   </div>
 </template>
 
@@ -12,12 +12,19 @@ export default {
   data () {
     return {
       placeholder: 'User name',
-      user: ''
+      userName: ''
+    }
+  },
+  computed: {
+    newmessage() {
+      return `${this.userName} START`
     }
   },
   methods: {
-    hello: function (event) {
-      alert("Let's play")
+    launch (e) {
+      this.$store.dispatch('updateUserName', {userName: this.userName})
+      this.$router.push('/quiz')
+      
     }
   }
 }
